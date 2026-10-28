@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+env/
+venv/
+*.db
+*.sqlite3
+
+# Storage & Temporary Uploads
+backend/data/*.db
+backend/data/uploads/*
+backend/data/simulations/*
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+.eslintcache
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local Environment Secrets
+.env
+sdr_collector/.env
