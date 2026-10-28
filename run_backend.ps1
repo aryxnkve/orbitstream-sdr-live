@@ -28,3 +28,4 @@ Write-Host "[Info] Press Ctrl+C at any time to stop the server." -ForegroundColo
 Write-Host ""
 
 & $PythonExe -m uvicorn backend.app.main:app --host 0.0.0.0 --port 8000 --reload
+

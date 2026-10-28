@@ -21,3 +21,4 @@ echo.
 "%PYTHON_EXE%" -m sdr_collector.collector %*
 
 pause
+
