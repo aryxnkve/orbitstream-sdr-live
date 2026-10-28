@@ -24,7 +24,7 @@ except ImportError:
 class CollectorConfig:
     """RTL-SDR Collector configuration parameters."""
 
-    backend_url: str = "https://orbitstream.onrender.com"
+    backend_url: str = "https://orbitstream-hl80.onrender.com"
     api_key: str = "orbitstream-collector-key-2026"
     frequency_hz: int = 100_000_000  # 100 MHz default
     sample_rate_hz: int = 1_024_000   # 1.024 MS/s
