@@ -57,7 +57,10 @@ class CollectorConfig:
         # Override with environment variables
         backend = os.environ.get("ORBITSTREAM_BACKEND_URL") or os.environ.get("BACKEND_URL")
         if backend:
-            cfg.backend_url = backend.rstrip("/")
+            backend_clean = backend.rstrip("/")
+            if backend_clean.endswith("/api/sdr/ingest"):
+                backend_clean = backend_clean[:-len("/api/sdr/ingest")].rstrip("/")
+            cfg.backend_url = backend_clean
 
         api_key = os.environ.get("ORBITSTREAM_COLLECTOR_API_KEY") or os.environ.get("ORBITSTREAM_API_KEY") or os.environ.get("SDR_API_KEY")
         if api_key:
