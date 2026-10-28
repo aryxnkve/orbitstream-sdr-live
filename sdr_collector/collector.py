@@ -127,6 +127,13 @@ class SDRCollector:
                 **metrics,
                 "device_info": device_info,
             }
+            logger.info(
+                f"[RF Reading] Power: {payload.get('relative_power_dbfs'):.1f} dBFS | "
+                f"Peak: {payload.get('peak_power_dbfs'):.1f} dBFS | "
+                f"SNR: {payload.get('snr_estimate_db'):.1f} dB | "
+                f"Noise: {payload.get('noise_floor_dbfs'):.1f} dBFS | "
+                f"PAPR: {payload.get('papr_db'):.1f} dB"
+            )
             return payload
 
         except Exception as exc:
